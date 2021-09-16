@@ -21,7 +21,7 @@ function drawChart() {
 
 
   var piechart_options = {title:'Estado de establecimientos de la región',
-                 width:280,
+                 width:350,
                  height:300};
   var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
   piechart.draw(data, piechart_options);
@@ -51,7 +51,7 @@ function linea() {
 
     var options = {
       title:'Cantidad de establecimientos',
-      width: 280,
+      width: 350,
       height:300 
     };
 
