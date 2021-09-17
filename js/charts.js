@@ -59,3 +59,46 @@ function linea() {
 
     chart.draw(data, google.charts.Line.convertOptions(options));
   }
+  function iniciarMap(){
+    var coord = {lat:-34.5956145 ,lng: -58.4431949};
+    var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 10,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+}
+google.charts.load('current', {
+  'packages':['geochart'],
+});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+  var data = google.visualization.arrayToDataTable([
+    ['City', 'Popularity'],
+    ['Coquimbo', 200],
+   
+  ]);
+
+  var options = {
+    region: 'CL',
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'),{
+zoom: 8,
+center: { lat: 35.717, lng: 139.731 },
+});
+
+  chart.draw(data, options);
+}
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}

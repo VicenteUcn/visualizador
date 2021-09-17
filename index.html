@@ -52,6 +52,7 @@
          
            
                 <div class="card col-10 col-md-6 m-4" >
+                  
                     <div id="piechart_div"></div>
                     <div class="card-body">
                       <h5 class="card-title">Establecimientos activos</h5>
@@ -72,6 +73,21 @@
             </div>
           </div>
           
+          <div class="card col-10 col-md-6 m-4" >
+                  
+            <div id="map"></div>
+
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsSfNfrXwOssKuBkyOX9YLqKHTByGgoac&callback=initMap&v=weekly"
+              async
+            ></script>
+            <div class="card-body">
+              <h5 class="card-title">Mapa de la region</h5>
+              <p class="card-text">Contenido del total de los 1001 establecimientos de la region de coquimbo en el sistema el año 2020 segun datos de la base del mineduc.</p>
+              <a href="#" class="btn btn-dark">Go somewhere</a>
+            </div>
+          </div>
   
 
   </div>
