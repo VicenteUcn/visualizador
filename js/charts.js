@@ -27,7 +27,7 @@ function drawChart() {
   piechart.draw(data, piechart_options);
 
 
-}
+};
 function linea() {
 
     var data = new google.visualization.DataTable();
@@ -73,32 +73,3 @@ function linea() {
 google.charts.load('current', {
   'packages':['geochart'],
 });
-google.charts.setOnLoadCallback(drawRegionsMap);
-
-function drawRegionsMap() {
-  var data = google.visualization.arrayToDataTable([
-    ['City', 'Popularity'],
-    ['Coquimbo', 200],
-   
-  ]);
-
-  var options = {
-    region: 'CL',
-  };
-
-  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'),{
-zoom: 8,
-center: { lat: 35.717, lng: 139.731 },
-});
-
-  chart.draw(data, options);
-}
-
-let map;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
